@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Halyvane — questions about your personalized order, a custom request or anything else? Get in touch.">
+  <title>Contact | Halyvane</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <main>
+    <section class="section page-section" id="contact">
+      <div class="container">
+        <div class="section-header" style="max-width:720px;">
+          <span class="section-tag">Get in Touch</span>
+          <h2>Contact Halyvane</h2>
+          <p class="subtitle">Have a question about a product, your personalized order or a custom request? We'd love to hear from you.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-block">
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-detail-content">
+                <h4>Email</h4>
+                <p><a href="mailto:info@halyvane.com">info@halyvane.com</a></p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i class="fa-solid fa-signature"></i></div>
+              <div class="contact-detail-content">
+                <h4>Business Name</h4>
+                <p>Halyvane</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-detail-content">
+                <h4>Trading Location</h4>
+                <p>United States</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="contact-detail-content">
+                <h4>Support Hours</h4>
+                <p>Mon–Fri, 9am–5pm ET</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <h3>Send a Message</h3>
+            <form id="contact-form" onsubmit="event.preventDefault(); this.reset(); alert('Thanks for reaching out! This is a demo store — for real inquiries please email info@halyvane.com.');">
+              <div class="form-group">
+                <label for="form-name">Your Name</label>
+                <input type="text" id="form-name" class="form-control" placeholder="Enter your name" required>
+              </div>
+              <div class="form-group">
+                <label for="form-email">Your Email</label>
+                <input type="email" id="form-email" class="form-control" placeholder="Enter your email" required>
+              </div>
+              <div class="form-group">
+                <label for="form-message">Message</label>
+                <textarea id="form-message" class="form-control" placeholder="How can we help you?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

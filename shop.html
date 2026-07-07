@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop personalized print-on-demand products — custom apparel, mugs, wall art, phone cases, bags and accessories from Halyvane.">
+  <title>Shop | Halyvane Personalized Products</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <main>
+    <section class="section page-section" id="shop">
+      <div class="container">
+        <div class="section-header" style="text-align:center;margin:0 auto 48px;max-width:720px;">
+          <span class="section-tag">Our Shop</span>
+          <h2>Design something personal</h2>
+          <p class="subtitle">Every product below is made to order and fully personalizable. Search, filter, then open an item to add your own text, color and size.</p>
+        </div>
+
+        <div class="shop-controls">
+          <div class="search-bar-wrapper">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="shop-search-input" placeholder="Search products..." aria-label="Search products">
+          </div>
+          <div class="category-filters" id="category-filters-container"></div>
+        </div>
+
+        <div class="shop-products-grid" id="shop-products-grid"></div>
+
+        <div class="shop-load-more" id="shop-load-more-container" style="text-align:center;margin-top:48px;">
+          <button class="btn btn-secondary" id="load-more-btn">Load More Products</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

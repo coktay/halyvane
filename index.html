@@ -3,328 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Halyvane is a US-based online retail brand offering printed apparel, selected jewelry, accessories and gift items through online marketplaces such as Etsy.">
+  <meta name="description" content="Halyvane is a personalized print-on-demand store. Design custom apparel, mugs, wall art, phone cases, bags and accessories — made to order and shipped worldwide.">
   <meta name="author" content="Halyvane">
-  <title>Halyvane | Apparel, Jewelry & Gift Accessories</title>
-  
-  <!-- CSS Stylesheet -->
+  <title>Halyvane | Personalized Print-on-Demand Store</title>
   <link rel="stylesheet" href="style.css">
-  
-  <!-- FontAwesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-  <!-- 1. Header / Navigation -->
-  <header id="site-header">
-    <div class="container navbar">
-      <a href="#" class="logo" id="header-logo-link">Haly<span>vane</span></a>
-      
-      <nav>
-        <ul class="nav-menu" id="navigation-menu">
-          <li><a href="#about" class="nav-link" id="nav-link-about">About</a></li>
-          <li><a href="#products" class="nav-link" id="nav-link-products">Products</a></li>
-          <li><a href="#how-it-works" class="nav-link" id="nav-link-how-it-works">How It Works</a></li>
-          <li><a href="#shop" class="nav-link" id="nav-link-shop">Shop</a></li>
-          <li><a href="#contact" class="nav-link" id="nav-link-contact">Contact</a></li>
-        </ul>
-      </nav>
-      
-      <button class="hamburger" id="mobile-menu-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
   <main>
-    <!-- 2. Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="hero-section">
       <div class="container hero-grid">
         <div class="hero-content">
-          <span class="section-tag" id="hero-tag">Welcome to Halyvane</span>
-          <h1 id="hero-main-heading">Apparel, jewelry and gift accessories sold online.</h1>
-          <p id="hero-description">
-            Halyvane is a US-based online retail brand offering printed apparel, selected jewelry, accessories and gift items through online marketplaces such as Etsy.
+          <span class="section-tag">Personalized Print-on-Demand</span>
+          <h1>Your ideas, printed on the things you love.</h1>
+          <p>
+            Halyvane turns your name, words and moments into custom apparel, drinkware, wall art,
+            phone cases, bags and accessories. Every item is made to order and personalized just for you.
           </p>
           <div class="hero-buttons">
-            <a href="#shop" class="btn btn-primary" id="hero-cta-etsy">Etsy Store Launch in Progress</a>
-            <a href="#how-it-works" class="btn btn-secondary" id="hero-cta-how">How Orders Work</a>
+            <a href="shop.html" class="btn btn-primary">Start Designing</a>
+            <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
+          </div>
+          <div class="hero-trust">
+            <span><i class="fa-solid fa-star"></i> 4.8/5 from 2,900+ makers</span>
+            <span><i class="fa-solid fa-truck-fast"></i> Free shipping over $50</span>
           </div>
         </div>
         <div class="hero-visual">
           <div class="hero-image-wrapper">
-            <img src="images/hero.png" alt="Halyvane minimal fashion and accessories flat lay" id="hero-image">
+            <img src="images/hero.png" alt="Personalized print-on-demand products by Halyvane">
           </div>
-          <div class="hero-badge" id="hero-visual-badge">
-            <span class="badge-title">US Brand</span>
-            <span class="badge-subtitle">Made-to-order & curated</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. About Section -->
-    <section class="section section-bg" id="about">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag" id="about-tag">About Us</span>
-          <h2 id="about-heading">A small online retail brand with a made-to-order model.</h2>
-          <p class="subtitle" id="about-subtitle">How we operate and deliver our collections</p>
-        </div>
-        <div class="about-content">
-          <div class="about-paragraphs">
-            <p id="about-p1">
-              Halyvane focuses on simple, giftable and everyday products that can be sold online without holding large amounts of physical stock at the beginning.
-            </p>
-            <p id="about-p2">
-              For printed apparel, the business may use a print-on-demand production model. This means products are produced after a customer order is placed, then fulfilled by a production or shipping partner where applicable.
-            </p>
-            <p id="about-p3">
-              Alongside apparel, Halyvane may also offer selected jewelry, accessories and small gift items through its upcoming Etsy shop and other online sales channels.
-            </p>
-          </div>
-          <div class="about-note" id="about-disclaimer-note">
-            <h3 id="about-note-title"><i class="fa-solid fa-circle-info"></i> Note on Scale</h3>
-            <p id="about-note-text">
-              Halyvane does not currently present itself as a large wholesaler or warehouse-based supplier. The current focus is online retail, marketplace sales and made-to-order products.
-            </p>
+          <div class="hero-badge">
+            <span class="badge-title">Made to order</span>
+            <span class="badge-subtitle">Personalized &amp; printed on demand</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. Product Categories Section -->
-    <section class="section" id="products">
+    <!-- Category tiles -->
+    <section class="section" id="categories">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag" id="products-tag">Our Products</span>
-          <h2 id="products-heading">What We Sell</h2>
-          <p class="subtitle" id="products-subtitle">Product availability may change over time as new designs and collections are introduced to the store.</p>
+        <div class="section-header" style="text-align:center;margin:0 auto 60px;max-width:640px;">
+          <span class="section-tag">Shop by Category</span>
+          <h2>Pick a canvas for your creativity</h2>
+          <p class="subtitle">Six product families, all fully personalizable. Choose one and make it yours.</p>
         </div>
-        
-        <div class="products-grid" id="product-categories-grid">
-          <!-- Card 1 -->
-          <article class="product-card" id="product-card-apparel">
-            <div class="product-img-wrapper">
-              <img src="images/apparel.png" alt="Printed apparel category" id="product-img-apparel">
-            </div>
-            <div class="product-info">
-              <div>
-                <h3 id="product-title-apparel">1. Printed Apparel</h3>
-                <p id="product-desc-apparel">Made-to-order t-shirts and casual clothing featuring printed designs.</p>
-              </div>
-            </div>
-          </article>
+        <div class="category-tiles" id="category-tiles"></div>
+      </div>
+    </section>
 
-          <!-- Card 2 -->
-          <article class="product-card" id="product-card-jewelry">
-            <div class="product-img-wrapper">
-              <img src="images/jewelry.png" alt="Selected jewelry pieces" id="product-img-jewelry">
-            </div>
-            <div class="product-info">
-              <div>
-                <h3 id="product-title-jewelry">2. Jewelry</h3>
-                <p id="product-desc-jewelry">Selected jewelry pieces and small accessories suitable for everyday use or gifting.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="product-card" id="product-card-gifts">
-            <div class="product-img-wrapper">
-              <img src="images/gifts.png" alt="Gift accessories category" id="product-img-gifts">
-            </div>
-            <div class="product-info">
-              <div>
-                <h3 id="product-title-gifts">3. Gift Accessories</h3>
-                <p id="product-desc-gifts">Small online gift products and accessories for seasonal or everyday occasions.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 4 -->
-          <article class="product-card" id="product-card-future">
-            <div class="product-img-wrapper">
-              <img src="images/future.png" alt="Future collections preview" id="product-img-future">
-            </div>
-            <div class="product-info">
-              <div>
-                <h3 id="product-title-future">4. Future Collections</h3>
-                <p id="product-desc-future">New designs, personalized items and limited product ranges may be introduced gradually.</p>
-              </div>
-            </div>
-          </article>
+    <!-- Featured products -->
+    <section class="section section-bg" id="featured">
+      <div class="container">
+        <div class="section-header" style="text-align:center;margin:0 auto 48px;max-width:640px;">
+          <span class="section-tag">Bestsellers</span>
+          <h2>Most-loved personalized picks</h2>
+          <p class="subtitle">Top-rated products our customers personalize again and again.</p>
+        </div>
+        <div class="shop-products-grid" id="home-featured-grid"></div>
+        <div style="text-align:center;margin-top:48px;">
+          <a href="shop.html" class="btn btn-primary">Browse All Products</a>
         </div>
       </div>
     </section>
 
-    <!-- 5. How Orders Work Section -->
-    <section class="section section-bg" id="how-it-works">
+    <!-- How it works -->
+    <section class="section" id="how-it-works">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag" id="how-tag">Order Process</span>
-          <h2 id="how-heading">How Orders Work</h2>
-          <p class="subtitle" id="how-subtitle">The process is designed for a small online retail business starting with marketplace sales.</p>
+        <div class="section-header" style="text-align:center;margin:0 auto 60px;max-width:640px;">
+          <span class="section-tag">How Personalization Works</span>
+          <h2>Your custom product in 3 simple steps</h2>
+          <p class="subtitle">Design it your way — we print, pack and ship it made to order.</p>
         </div>
-        
-        <div class="steps-container" id="steps-list">
-          <!-- Step 1 -->
-          <div class="step-card" id="step-card-1">
+        <div class="steps-container">
+          <div class="step-card">
             <div class="step-num">01</div>
-            <h3 id="step-title-1">Customer orders online</h3>
-            <p id="step-desc-1">Once launched, customers browse products through the online store, view prices and place an order through the platform.</p>
+            <h3>Pick your product</h3>
+            <p>Browse apparel, drinkware, wall art, cases, bags and accessories, then open the one you love.</p>
           </div>
-          
-          <!-- Step 2 -->
-          <div class="step-card" id="step-card-2">
+          <div class="step-card">
             <div class="step-num">02</div>
-            <h3 id="step-title-2">Item is prepared</h3>
-            <p id="step-desc-2">Printed apparel may be produced after purchase using a print-on-demand partner. Other items may be handled according to current stock or supplier availability.</p>
+            <h3>Personalize it</h3>
+            <p>Add your text, choose a color and size, and watch the live preview update in real time.</p>
           </div>
-          
-          <!-- Step 3 -->
-          <div class="step-card" id="step-card-3">
+          <div class="step-card">
             <div class="step-num">03</div>
-            <h3 id="step-title-3">Order is dispatched</h3>
-            <p id="step-desc-3">Shipping and delivery details will be provided through the sales channel after the order is processed.</p>
+            <h3>Made &amp; shipped</h3>
+            <p>We print your order on demand, pack it with care and deliver it — with tracked worldwide shipping.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. Shop on Etsy Section -->
-    <section class="section" id="shop">
+    <!-- Trust / policies -->
+    <section class="section section-bg" id="policies">
       <div class="container">
-        <div class="etsy-promo" id="etsy-promo-banner">
-          <span class="section-tag" id="etsy-tag">Launch Status</span>
-          <h2 id="etsy-heading">Preparing Our Etsy Store</h2>
-          <p id="etsy-description-text">
-            Halyvane is currently preparing its Etsy storefront, product listings and fulfillment workflow. Online sales will begin after the launch process is completed.
-          </p>
-          <a href="#contact" class="btn btn-primary" id="etsy-shop-btn">Contact for Inquiries</a>
+        <div class="section-header" style="text-align:center;margin:0 auto 60px;max-width:640px;">
+          <span class="section-tag">Why Halyvane</span>
+          <h2>Shopping you can feel good about</h2>
         </div>
-      </div>
-    </section>
-
-    <!-- 7. Customer Information Section -->
-    <section class="section section-bg" id="customer-info">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag" id="cust-info-tag">Policies</span>
-          <h2 id="cust-info-heading">Customer Information</h2>
-          <p class="subtitle" id="cust-info-subtitle">The details below explain the basic trading model clearly without overstating the size of the business.</p>
-        </div>
-        
-        <div class="info-grid" id="info-cards-container">
-          <!-- Card 1 -->
-          <div class="info-card" id="info-card-production">
-            <div class="info-card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-            <h3 id="info-card-title-production">Production</h3>
-            <p id="info-card-desc-production">Some products, especially printed apparel, may be made after purchase. This helps reduce waste and avoids unnecessary stock.</p>
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fa-solid fa-hands-holding"></i></div>
+            <h3>Made to order</h3>
+            <p>Nothing sits in a warehouse. Every item is printed fresh for you, reducing waste and overstock.</p>
           </div>
-          
-          <!-- Card 2 -->
-          <div class="info-card" id="info-card-shipping">
+          <div class="info-card">
             <div class="info-card-icon"><i class="fa-solid fa-truck-fast"></i></div>
-            <h3 id="info-card-title-shipping">Shipping</h3>
-            <p id="info-card-desc-shipping">Shipping options, costs and delivery estimates will be shown on the sales platform at checkout.</p>
+            <h3>Fast, safe shipping</h3>
+            <p>Carefully packaged and dispatched within 2–4 business days, with tracked worldwide delivery.</p>
           </div>
-          
-          <!-- Card 3 -->
-          <div class="info-card" id="info-card-returns">
-            <div class="info-card-icon"><i class="fa-solid fa-headset"></i></div>
-            <h3 id="info-card-title-returns">Returns & Support</h3>
-            <p id="info-card-desc-returns">Customers will be able to contact us through the original sales channel for order questions, returns or product support.</p>
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fa-solid fa-rotate-left"></i></div>
+            <h3>Easy 30-day returns</h3>
+            <p>Not quite right? We offer hassle-free returns and remakes on personalization mistakes.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 8. Contact Section -->
-    <section class="section" id="contact">
+    <!-- CTA -->
+    <section class="section" id="cta">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag" id="contact-tag">Get in Touch</span>
-          <h2 id="contact-heading">Contact Halyvane</h2>
-          <p class="subtitle" id="contact-subtitle">For product questions, marketplace inquiries or business correspondence, please use the contact details below.</p>
-        </div>
-        
-        <div class="contact-grid">
-          <!-- Details Left -->
-          <div class="contact-info-block" id="contact-info-details">
-            
-            <div class="contact-detail" id="contact-detail-email">
-              <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
-              <div class="contact-detail-content">
-                <h4>Email</h4>
-                <p><a href="mailto:info@halyvane.com" id="contact-email-link">info@halyvane.com</a></p>
-              </div>
-            </div>
-            
-            <div class="contact-detail" id="contact-detail-brand">
-              <div class="contact-detail-icon"><i class="fa-solid fa-signature"></i></div>
-              <div class="contact-detail-content">
-                <h4>Business Name</h4>
-                <p id="contact-business-name">Halyvane</p>
-              </div>
-            </div>
-
-            <div class="contact-detail" id="contact-detail-location">
-              <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div class="contact-detail-content">
-                <h4>Trading Location</h4>
-                <p id="contact-location">United States</p>
-              </div>
-            </div>
-
-            <div class="contact-detail" id="contact-detail-channel">
-              <div class="contact-detail-icon"><i class="fa-solid fa-store"></i></div>
-              <div class="contact-detail-content">
-                <h4>Main Sales Channel</h4>
-                <p id="contact-channel">Etsy Marketplace</p>
-              </div>
-            </div>
-            
-          </div>
-          
-          <!-- Mock Form Right (Aesthetic UX representation) -->
-          <div class="contact-form-wrapper" id="contact-form-container">
-            <h3>Send a Message</h3>
-            <form id="contact-form" onsubmit="event.preventDefault(); alert('For direct inquiries, please email us at info@halyvane.com. Thank you!');">
-              <div class="form-group">
-                <label for="form-name">Your Name</label>
-                <input type="text" id="form-name" class="form-control" placeholder="Enter your name" required>
-              </div>
-              <div class="form-group">
-                <label for="form-email">Your Email</label>
-                <input type="email" id="form-email" class="form-control" placeholder="Enter your email" required>
-              </div>
-              <div class="form-group">
-                <label for="form-message">Message</label>
-                <textarea id="form-message" class="form-control" placeholder="How can we help you?" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" id="form-submit-btn" style="width: 100%;">Send Message</button>
-            </form>
-          </div>
+        <div class="etsy-promo">
+          <h2>Ready to make something yours?</h2>
+          <p>Start with a bestseller or design from scratch. Every product is personalizable and made to order.</p>
+          <a href="shop.html" class="btn btn-primary">Start Designing</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- 9. Footer -->
-  <footer id="site-footer">
-    <div class="container footer-content">
-      <div class="footer-logo" id="footer-logo-brand">Haly<span>vane</span></div>
-      <p class="footer-tagline" id="footer-tagline-text">Online retail • Apparel • Jewelry • Accessories • Gifts</p>
-      <div class="footer-meta" id="footer-copyright-text">
-        &copy; 2026 Halyvane. All rights reserved.
-      </div>
-    </div>
-  </footer>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Home page: category tiles + featured bestsellers (data.js is loaded above).
+    document.addEventListener("DOMContentLoaded", () => {
+      const tiles = document.getElementById("category-tiles");
+      if (tiles) {
+        tiles.innerHTML = CATEGORIES.map((c) => `
+          <a class="category-tile" href="shop.html?cat=${c.key}">
+            <span class="category-tile-img">
+              <img src="${c.image}" alt="${c.label}" loading="lazy" onerror="this.onerror=null;this.src='${fallbackImage(c.key)}'">
+              <span class="category-tile-icon"><i class="${c.icon}"></i></span>
+            </span>
+            <span class="category-tile-body">
+              <span class="category-tile-label">${c.label}</span>
+              <span class="category-tile-cta">Shop <i class="fa-solid fa-arrow-right"></i></span>
+            </span>
+          </a>`).join("");
+      }
 
-  <!-- JavaScript File -->
-  <script src="script.js"></script>
+      const grid = document.getElementById("home-featured-grid");
+      if (grid) {
+        const featured = [...PRODUCTS].sort((a, b) => b.rating - a.rating).slice(0, 8);
+        const catLabel = {};
+        CATEGORIES.forEach((c) => (catLabel[c.key] = c.label));
+        grid.innerHTML = featured.map((p) => `
+          <article class="shop-item-card">
+            ${p.rating >= 4.9 ? '<span class="shop-item-badge">Bestseller</span>' : ""}
+            <a class="shop-item-img-wrapper" href="product.html?id=${p.id}" aria-label="${p.name}">
+              <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='${fallbackImage(p.category)}'">
+              <span class="shop-item-personalize-tag"><i class="fa-solid fa-pen-to-square"></i> Personalize</span>
+            </a>
+            <div class="shop-item-info">
+              <div class="shop-item-meta">
+                <span class="shop-item-category">${catLabel[p.category] || p.category}</span>
+                <h3 class="shop-item-title"><a href="product.html?id=${p.id}">${p.name}</a></h3>
+              </div>
+              <div class="shop-item-bottom">
+                <span class="shop-item-price">$${p.price.toFixed(2)}</span>
+                <a class="btn btn-primary btn-sm" href="product.html?id=${p.id}">Customize</a>
+              </div>
+            </div>
+          </article>`).join("");
+      }
+    });
+  </script>
 </body>
 </html>
