@@ -26,7 +26,7 @@
             <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
           </div>
           <div class="hero-trust">
-            <span><i class="fa-solid fa-star"></i> 4.8/5 from 2,900+ makers</span>
+            <span><i class="fa-solid fa-pen-to-square"></i> Personalized &amp; made to order</span>
             <span><i class="fa-solid fa-truck-fast"></i> Free shipping over $50</span>
           </div>
         </div>
@@ -58,9 +58,9 @@
     <section class="section section-bg" id="featured">
       <div class="container">
         <div class="section-header" style="text-align:center;margin:0 auto 48px;max-width:640px;">
-          <span class="section-tag">Bestsellers</span>
-          <h2>Most-loved personalized picks</h2>
-          <p class="subtitle">Top-rated products our customers personalize again and again.</p>
+          <span class="section-tag">Featured</span>
+          <h2>Featured personalized products</h2>
+          <p class="subtitle">A selection from our made-to-order range — each one customizable with your own text.</p>
         </div>
         <div class="shop-products-grid" id="home-featured-grid"></div>
         <div style="text-align:center;margin-top:48px;">
@@ -158,12 +158,11 @@
 
       const grid = document.getElementById("home-featured-grid");
       if (grid) {
-        const featured = [...PRODUCTS].sort((a, b) => b.rating - a.rating).slice(0, 8);
+        const featured = PRODUCTS.slice(0, 8);
         const catLabel = {};
         CATEGORIES.forEach((c) => (catLabel[c.key] = c.label));
         grid.innerHTML = featured.map((p) => `
           <article class="shop-item-card">
-            ${p.rating >= 4.9 ? '<span class="shop-item-badge">Bestseller</span>' : ""}
             <a class="shop-item-img-wrapper" href="product.html?id=${p.id}" aria-label="${p.name}">
               <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='${fallbackImage(p.category)}'">
               <span class="shop-item-personalize-tag"><i class="fa-solid fa-pen-to-square"></i> Personalize</span>

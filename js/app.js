@@ -68,14 +68,24 @@
 
   function buildFooter() {
     const links = NAV.map((n) => `<a href="${n.href}">${n.label}</a>`).join("");
+    const legal = [
+      { href: "privacy.html", label: "Privacy Policy" },
+      { href: "terms.html", label: "Terms of Service" },
+      { href: "refund.html", label: "Refund & Shipping Policy" }
+    ].map((n) => `<a href="${n.href}">${n.label}</a>`).join("");
     const footer = document.createElement("footer");
     footer.id = "site-footer";
     footer.innerHTML = `
       <div class="container footer-content">
         <div class="footer-logo">Haly<span>vane</span></div>
-        <p class="footer-tagline">Personalized Print-on-Demand • Apparel • Drinkware • Wall Art • Cases • Bags • Accessories</p>
+        <p class="footer-tagline">Personalized Print-on-Demand • Ornaments • Tote Bags • Wall Art • Baby Clothing • T-Shirts</p>
         <nav class="footer-nav">${links}</nav>
-        <div class="footer-meta">&copy; 2026 Halyvane. All rights reserved. — Demo store for presentation.</div>
+        <nav class="footer-nav footer-legal-nav">${legal}</nav>
+        <div class="footer-business">
+          <strong>HALYVANE LLC</strong> &middot; United States<br>
+          Customer support: <a href="mailto:info@halyvane.com">info@halyvane.com</a>
+        </div>
+        <div class="footer-meta">&copy; 2026 HALYVANE LLC. All rights reserved.</div>
       </div>`;
     return footer;
   }

@@ -2,9 +2,9 @@
  * Halyvane — Personalized Print-on-Demand Store (DEMO / work-in-progress).
  * Shared data: product catalog + category metadata.
  *
- * Images are intentionally SAMPLE placeholders (local SVG data-URIs) — no real
- * product photos yet. They always render (no network needed) and clearly show the
- * store is still being built. Swap a product's `image` later for a real photo URL.
+ * Product photos live in images/products/ (one JPEG per product, named after the
+ * product slug). They are free-license stock photos (Openverse / CC / StockSnap).
+ * samplePlaceholder() is kept only as the onerror fallback if a photo fails to load.
  */
 
 /* ---- Sample placeholder generator (brand-styled "SAMPLE PRODUCT" card) ---- */
@@ -33,14 +33,15 @@ function fallbackImage(_category) {
   return samplePlaceholder("Sample Product");
 }
 
-/* Category metadata — order as requested: ornament, tote bag, wall art, baby clothing, tshirt. */
+/* Category metadata — order as requested: ornament, tote bag, wall art, baby clothing, tshirt.
+   Each tile uses a representative product photo from its own category. */
 const CATEGORIES = [
-  { key: "ornament",      label: "Ornaments",     icon: "fa-solid fa-snowflake" },
-  { key: "tote-bag",      label: "Tote Bags",     icon: "fa-solid fa-bag-shopping" },
-  { key: "wall-art",      label: "Wall Art",      icon: "fa-solid fa-image" },
-  { key: "baby-clothing", label: "Baby Clothing", icon: "fa-solid fa-baby" },
-  { key: "tshirt",        label: "T-Shirts",      icon: "fa-solid fa-shirt" }
-].map((c) => ({ ...c, image: samplePlaceholder(c.label) }));
+  { key: "ornament",      label: "Ornaments",     icon: "fa-solid fa-snowflake",     image: "images/products/personalized-bauble-ornament.jpg" },
+  { key: "tote-bag",      label: "Tote Bags",     icon: "fa-solid fa-bag-shopping",  image: "images/products/custom-canvas-tote-bag.jpg" },
+  { key: "wall-art",      label: "Wall Art",      icon: "fa-solid fa-image",         image: "images/products/custom-canvas-print.jpg" },
+  { key: "baby-clothing", label: "Baby Clothing", icon: "fa-solid fa-baby",          image: "images/products/baby-announcement-romper.jpg" },
+  { key: "tshirt",        label: "T-Shirts",      icon: "fa-solid fa-shirt",         image: "images/products/custom-text-classic-tee.jpg" }
+];
 
 /* Reusable size / option sets */
 const TEE_SIZES  = ["S", "M", "L", "XL", "XXL"];
@@ -75,10 +76,15 @@ const ORNAMENT_COLORS = [
   { name: "White",  hex: "#ffffff" }
 ];
 
-/* Helper: attach a sample placeholder image + personalizable flag to each product. */
+/* Helper: attach the product photo + personalizable flag to each product.
+   Photos live at images/products/<name-as-kebab-case>.jpg; if one is missing the
+   <img> onerror handler falls back to the sample placeholder. */
+function productImage(name) {
+  return "images/products/" + String(name).toLowerCase().replace(/\s+/g, "-") + ".jpg";
+}
 function P(id, name, category, price, rating, reviews, colors, sizes, placeholder, description) {
   return { id, name, category, price, rating, reviews, colors, sizes, personalizable: true,
-    placeholder, description, image: samplePlaceholder(name) };
+    placeholder, description, image: productImage(name) };
 }
 
 /* 30 personalizable POD products across the 5 categories (6 each). */

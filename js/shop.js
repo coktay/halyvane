@@ -35,18 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return matchCat && matchSearch;
     });
 
-  const starsFor = (rating) => {
-    const full = Math.floor(rating);
-    const half = rating % 1 !== 0;
-    let out = "";
-    for (let i = 0; i < 5; i++) {
-      if (i < full) out += '<i class="fa-solid fa-star"></i>';
-      else if (i === full && half) out += '<i class="fa-solid fa-star-half-stroke"></i>';
-      else out += '<i class="fa-regular fa-star"></i>';
-    }
-    return out;
-  };
-
   const render = (reset) => {
     if (reset) visibleCount = PAGE_SIZE;
     const filtered = getFiltered();
@@ -65,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     grid.innerHTML = shown.map((p) => `
       <article class="shop-item-card" data-id="${p.id}">
-        ${p.rating >= 4.9 ? '<span class="shop-item-badge">Bestseller</span>' : ""}
+        <span class="shop-item-badge shop-item-badge-soft">Personalizable</span>
         <a class="shop-item-img-wrapper" href="product.html?id=${p.id}" aria-label="${p.name}">
           <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='${fallbackImage(p.category)}'">
           <span class="shop-item-personalize-tag"><i class="fa-solid fa-pen-to-square"></i> Personalize</span>
@@ -74,10 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="shop-item-meta">
             <span class="shop-item-category">${catLabel[p.category] || p.category}</span>
             <h3 class="shop-item-title"><a href="product.html?id=${p.id}">${p.name}</a></h3>
-            <div class="shop-item-rating">
-              <span>${starsFor(p.rating)}</span>
-              <span class="shop-item-reviews-count">(${p.reviews})</span>
-            </div>
           </div>
           <div class="shop-item-bottom">
             <span class="shop-item-price">$${p.price.toFixed(2)}</span>

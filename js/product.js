@@ -27,18 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.title = `${product.name} | Halyvane`;
 
-  const starsFor = (rating) => {
-    const full = Math.floor(rating);
-    const half = rating % 1 !== 0;
-    let out = "";
-    for (let i = 0; i < 5; i++) {
-      if (i < full) out += '<i class="fa-solid fa-star"></i>';
-      else if (i === full && half) out += '<i class="fa-solid fa-star-half-stroke"></i>';
-      else out += '<i class="fa-regular fa-star"></i>';
-    }
-    return out;
-  };
-
   // Selection state
   const state = {
     text: "",
@@ -81,10 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="product-info-col">
         <span class="product-cat-tag">${catLabel[product.category] || product.category}</span>
         <h1 class="product-title">${product.name}</h1>
-        <div class="product-rating-row">
-          <span class="shop-item-rating">${starsFor(product.rating)}</span>
-          <span class="product-reviews">${product.rating.toFixed(1)} · ${product.reviews} reviews</span>
-        </div>
+        <div class="product-badge-row"><span class="product-made-badge"><i class="fa-solid fa-pen-to-square"></i> Personalizable &amp; made to order</span></div>
         <div class="product-price">$${product.price.toFixed(2)}</div>
         <p class="product-desc">${product.description}</p>
 
